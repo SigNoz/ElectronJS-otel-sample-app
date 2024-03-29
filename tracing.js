@@ -19,9 +19,9 @@ const provider = new BasicTracerProvider({
 // Configure the OTLPTraceExporter to send traces to a specific backend.
 // Replace the {region} and headers with your backend's region and ingestion key.
 const otlpExporter = new OTLPTraceExporter({
-  url: 'https://ingest.in.signoz.cloud:443/v1/traces', // Backend URL
+  url: 'https://ingest.{region}.signoz.cloud:443/v1/traces', // SigNoz ingestion URL - region can be found in your SigNoz cloud settings
   headers: {
-    "signoz-access-token": "b51ea17a-9ac7-4ab9-9a04-de2062dd10f5", // Authentication token
+    "signoz-access-token": "<your-signoz-ingestion-key>", // Authentication token
   },
 });
 
