@@ -1,0 +1,1 @@
+Hello, this is a test file for the Electron instrumentation example with SigNoz.
